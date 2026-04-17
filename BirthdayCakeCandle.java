@@ -15,15 +15,16 @@ class Results {
     public static int birthdayCakeCandles(List<Integer> candles) {
     // Write your code here
         int high=0;
-        int count=1;
+        int count=0;
         for(int a:candles)
         {
-            if(a>=high)
+            if(a>high)
             {
-                if(a==high)
-                    count++;
-                else
+                count=1;
                     high=a;
+            }else if(a==high)
+            {
+                count++;
             }
         }
         return count;
